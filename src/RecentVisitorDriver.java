@@ -29,6 +29,7 @@ public class RecentVisitorDriver {
      job.setOutputValueClass(LongWritable.class);
     
      job.setNumReduceTasks(1);
+     // Add external jar file path here
      job.addFileToClassPath(new Path("json"));
     
      FileInputFormat.addInputPath(job, new Path(args[0]));
